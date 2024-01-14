@@ -1,0 +1,100 @@
+/* App.css */
+
+/* General styles */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(4px + 2vmin);
+  color: black;
+  align-items: left;
+  justify-content: left;
+  position: relative;
+  background-color: #f2f2f2;
+  border: 2px solid #d4d4d4;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(5, 51, 188, 0.325);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Image styles */
+.image {
+  background-image: url('./Image.jpeg');
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  position: absolute;
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 30px;
+  border: 2px solid #ffcc00;
+  background-color: #433901;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: flashAnimation 1s infinite alternate, pendulumAnimation 10s infinite ease-in-out;
+  top: 5%;
+  left: 5%;
+}
+
+/* Background styles */
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  max-width: 100%; /* Set the maximum width to 100% of the parent container */
+  max-height: 100vh; /* Set the maximum height to 100% of the viewport height */
+  display: block; /* Remove any extra spacing below the image */
+
+}
+
+/* Paragraph styles with Cizel font */
+.Para {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  width: 50%;
+  text-align: justify;
+
+  padding: 20px;
+  transform: rotate(0deg);
+  background-color: #f0e9d8;
+  border: 2px solid #d89b4c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(224, 203, 84, 0.3);
+  font-family: 'Cinzel Decorative', serif; /* Use the Cinzel Decorative font */
+  font-size: 18px;
+  text-transform: none;
+  line-height: 1.5;
+  color: #000000;
+  background-image: url('./txt_bg.jpeg');
+  background-repeat: repeat;
+  
+  /* Set a higher z-index to ensure it's displayed on top of the image */
+  z-index: 1;
+}
+
+/* Keyframe animations */
+@keyframes flash {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes pendulumAnimation {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg); /* Adjust the angle of the swing as needed */
+  }
+}
